@@ -4,13 +4,15 @@ var bodyParser = require("body-parser");
 var app = express();
 
 app.get("/data", (req, res) => {
-  console.log(req.body)
+  console.log('hello')
 });
 
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+//python3.5 -m http.server
 
 app.post("/data", (req, res) => {
   res.send("Request success");
